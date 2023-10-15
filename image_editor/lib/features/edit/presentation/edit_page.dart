@@ -56,18 +56,6 @@ class _EditPageState extends State<EditPage> {
     );
   }
 
-  Widget pageOptions() {
-    if (_currentIndex == 0) {
-      return buildAdjusts();
-    }
-
-    if (_currentIndex == 1) {
-      return buildCrop();
-    }
-
-    return buildPosition();
-  }
-
   PreferredSizeWidget buildAppBar() {
     return AppBar(
       title: const Text("Edition"),
@@ -125,9 +113,11 @@ class _EditPageState extends State<EditPage> {
           _currentIndex = index;
         });
 
+        // esse codigo nao se reflete em nenhuma mudança no programa
         switch (index) {
           case 0:
-            editorKey.currentState?.build(context);
+            // editorKey.currentState?.build(context);
+            editorKey.currentState?.getCropRect;
             break;
           case 1:
             // essa função realiza o processo de corte da imagem
@@ -139,6 +129,18 @@ class _EditPageState extends State<EditPage> {
         }
       },
     );
+  }
+
+  Widget pageOptions() {
+    if (_currentIndex == 0) {
+      return buildAdjusts();
+    }
+
+    if (_currentIndex == 1) {
+      return buildCrop();
+    }
+
+    return buildPosition();
   }
 
   // construção do view de apresentação da imagem
@@ -198,46 +200,6 @@ class _EditPageState extends State<EditPage> {
         ));
   }
 
-/*
-  Widget buildImageAdjust() {
-    return ColorFiltered(
-      // aplica o filtro de ajuste de brilho
-      colorFilter: ColorFilter.matrix(
-        ColorFilterGenerator.brightnessAdjustMatrix(
-          brightness: brightness,
-        ),
-      ),
-      // aplica o filtro de ajuste de contraste
-      child: ColorFiltered(
-        colorFilter:
-            ColorFilter.matrix(ColorFilterGenerator.contrastAdjustMatrix(
-          contrast: contrast,
-        )),
-        // aplica o filtro de ajuste de saturação
-        child: ColorFiltered(
-            colorFilter:
-                ColorFilter.matrix(ColorFilterGenerator.saturationAdjustMatrix(
-              saturation: saturation,
-            )),
-            // gera a imagem na tela do aplicativo
-            child: ExtendedImage(
-                image: ExtendedFileImageProvider(image),
-                height: MediaQuery.of(context).size.width,
-                width: MediaQuery.of(context).size.width,
-                extendedImageEditorKey: editorKey,
-                mode: ExtendedImageMode.none,
-                fit: BoxFit.contain,
-                initEditorConfigHandler: (ExtendedImageState? state) {
-                  return EditorConfig(
-                    maxScale: 8.0,
-                    cropRectPadding: const EdgeInsets.all(20.0),
-                    hitTestSize: 20.0,
-                  );
-                })),
-      ),
-    );
-  }
-*/
   // construção do view de edicao das caracteristicas
   Widget buildAdjusts() {
     return Container(
@@ -409,14 +371,17 @@ class _EditPageState extends State<EditPage> {
     );
   }
 
+  // deve estar no controlador da variavel 'editorKey.currentState'
   void flip() {
     editorKey.currentState?.flip();
   }
 
+  // deve estar no controlador da variavel 'editorKey.currentState'
   void rotateRight() {
     editorKey.currentState?.rotate(right: true);
   }
 
+  // deve estar no controlador da variavel 'editorKey.currentState'
   void rotateLeft() {
     editorKey.currentState?.rotate(right: false);
   }
@@ -456,6 +421,7 @@ class _EditPageState extends State<EditPage> {
         ));
   }
 
+  // deve estar no controlador da variavel 'editorKey.currentState'
   // reseta as configurações iniciais da imagem sendo editada
   void reset() {
     editorKey.currentState?.reset();
