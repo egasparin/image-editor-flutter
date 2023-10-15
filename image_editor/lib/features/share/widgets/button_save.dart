@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 
 class SaveButton extends StatelessWidget {
-  const SaveButton({super.key});
+  final void Function() callbackFunction;
+
+  const SaveButton({
+    super.key,
+    required this.callbackFunction,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return TextButton.icon(
+      style: TextButton.styleFrom(
+          foregroundColor: Colors.white),
+      icon: const Icon(Icons.save),
+      label: const Text('Salvar'),
       onPressed: () {
-        // colocar aqui a funcao para salvar na galeria
+        callbackFunction();
       },
-      child: const Row(children: [
-        Icon(Icons.save),
-        SizedBox(
-          width: 15,
-        ),
-        Text('Save'),
-      ]),
     );
   }
 }

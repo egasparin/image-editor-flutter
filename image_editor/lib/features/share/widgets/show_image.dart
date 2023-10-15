@@ -16,7 +16,13 @@ class _ShowImageState extends State<ShowImage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         // Exibe a imagem em um widget Image
-        Image.file(widget.imageFile),
+        SizedBox(
+            width: 0.9 * MediaQuery.of(context).size.width,
+            height: 0.7 * MediaQuery.of(context).size.height,
+            child: Image.file(
+              widget.imageFile,
+              fit: BoxFit.scaleDown,
+            )),
       ],
     );
   }

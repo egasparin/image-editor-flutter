@@ -31,25 +31,6 @@ class ColorFilterGenerator {
     ]).map((i) => i.toDouble()).toList();
   }
 
-  // static List<double> saturationAdjustMatrix({required double saturation}) {
-
-  //   if (saturation == 0) {
-  //     return identityMatrix;
-  //   }
-
-  //   double x = (1 + ((saturation > 0) ? (3 * saturation) : (saturation))).toDouble();
-  //   double lumR = 0.3086;
-  //   double lumG = 0.6094;
-  //   double lumB = 0.082;
-
-  //   return List<double>.from(<double>[
-  //     (lumR * (1 - x) + x), (lumG * (1 - x)), (lumB * (1 - x)), 0, 0,
-  //     (lumR * (1 - x)), (lumG * (1 - x) + x), (lumB * (1 - x)), 0, 0,
-  //     (lumR * (1 - x)), (lumG * (1 - x)), (lumB * (1 - x) + x), 0, 0, 
-  //     0, 0, 0, 1, 0
-  //   ]).map((i) => i.toDouble()).toList();
-  // }
-
   static List<double> saturationAdjustMatrix({required double saturation}) {
 
     final invertSaturation = 1-saturation;

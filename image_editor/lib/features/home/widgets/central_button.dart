@@ -44,7 +44,6 @@ class _CentralButtonState extends State<CentralButton> {
       ),
       onPressed: () {
         loadImage();
-        //tem que implementar a chamada da função para carregamento
       },
     );
   }

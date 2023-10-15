@@ -4,6 +4,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:extended_image/extended_image.dart';
 import 'package:image_editor/image_editor.dart';
+
 import '../../share/presentation/save_image.dart';
 import 'color_filter.dart';
 
@@ -34,7 +35,7 @@ class _EditPageState extends State<EditPage> {
   double contrast = 1;
   double saturation = 0;
 
-  // variavel que irá definir o tipo de corte
+  // variavel que irá definir o tipo de corte padrao
   double _aspectRatio = 1;
 
   @override
@@ -197,6 +198,7 @@ class _EditPageState extends State<EditPage> {
         ));
   }
 
+/*
   Widget buildImageAdjust() {
     return ColorFiltered(
       // aplica o filtro de ajuste de brilho
@@ -235,7 +237,7 @@ class _EditPageState extends State<EditPage> {
       ),
     );
   }
-
+*/
   // construção do view de edicao das caracteristicas
   Widget buildAdjusts() {
     return Container(
