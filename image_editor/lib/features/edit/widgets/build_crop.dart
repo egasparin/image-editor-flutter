@@ -23,19 +23,16 @@ class BuildCropOptions extends StatelessWidget {
                 icon: const Icon(Icons.crop_free_outlined),
                 onPressed: () {
                   aspectRatioController.setValue(0.0);
-                  print('free: ${aspectRatioController.value}');
                 }),
             IconButton(
                 icon: const Icon(Icons.crop_din_outlined),
                 onPressed: () {
                   aspectRatioController.setValue(1.0);
-                  print('1:1: ${aspectRatioController.value}');
                 }),
             IconButton(
                 icon: const Icon(Icons.crop_portrait_outlined),
                 onPressed: () {
                   aspectRatioController.setValue(3.0 / 4.0);
-                  print('3:4: ${aspectRatioController.value}');
                 })
           ],
         ));
