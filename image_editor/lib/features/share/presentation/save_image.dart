@@ -30,7 +30,7 @@ class _SaveImageState extends State<SaveImage> {
       appBar: AppBar(
           // para remover o botão de voltar, basta usar o 'false'
           // automaticallyImplyLeading: false,
-          
+
           title: const Text("Share and Save"),
           centerTitle: true,
           backgroundColor: Colors.green.shade500,

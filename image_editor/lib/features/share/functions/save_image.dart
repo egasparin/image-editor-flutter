@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
-import 'package:simple_image_editor/features/share/widgets/alert_image_saved.dart';
+import '../widgets/alert_image_saved.dart';
 
 Future<void> saveImage(BuildContext context, File image) async {
   // salva a imagem na galeria, e por meio do then
