@@ -12,6 +12,10 @@ class ColorFilterGenerator {
 
   static List<double> brightnessAdjustMatrix({required double brightness}) {
 
+    brightness = (brightness -1) > 0 
+                      ? (brightness - 1) * 100
+                      : (brightness - 1) * 255;
+
     return List<double>.from(<double>[
       1, 0, 0, 0, brightness,
       0, 1, 0, 0, brightness, 
@@ -34,9 +38,9 @@ class ColorFilterGenerator {
   static List<double> saturationAdjustMatrix({required double saturation}) {
 
     final invertSaturation = 1-saturation;
-    final R = 0.213 * invertSaturation;
-    final G = 0.715 * invertSaturation;
-    final B = 0.072 * invertSaturation;
+    final R = 0.3086 * invertSaturation;
+    final G = 0.6094 * invertSaturation;
+    final B = 0.0820 * invertSaturation;
 
     return List<double>.from(<double>[
       R + saturation, G, B, 0, 0,
@@ -45,5 +49,4 @@ class ColorFilterGenerator {
       0, 0, 0, 1, 0,
     ]).map((i) => i.toDouble()).toList();
   }
-
 }
