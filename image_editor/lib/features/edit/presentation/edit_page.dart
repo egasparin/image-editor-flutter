@@ -13,15 +13,15 @@ import '../widgets/build_page_options.dart';
 
 // TO-DO: Alterar de stateful para stateless
 
-class NewEditPage extends StatefulWidget {
+class EditPage extends StatefulWidget {
   final List arguments;
-  const NewEditPage({super.key, required this.arguments});
+  const EditPage({super.key, required this.arguments});
 
   @override
-  State<NewEditPage> createState() => _NewEditPageState();
+  State<EditPage> createState() => _EditPageState();
 }
 
-class _NewEditPageState extends State<NewEditPage> {
+class _EditPageState extends State<EditPage> {
   late File image;
   @override
   void initState() {

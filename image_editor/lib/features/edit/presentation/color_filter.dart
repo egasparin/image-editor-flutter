@@ -1,6 +1,12 @@
 // Esse filtro foi construido com base na resposta de BananaNeil, 
 // no forum Stackoverflow (https://stackoverflow.com/questions/64639589/how-to-adjust-hue-saturation-and-brightness-of-an-image-or-widget-in-flutter)
 
+/* 
+  Nao altere mais os paremetros, os melhores resultados foram conseguidos
+  por meio destes atuais. Todos os testes foram realizados
+*/
+
+
 class ColorFilterGenerator {
 
   static List<double> identityMatrix =  [
@@ -12,9 +18,7 @@ class ColorFilterGenerator {
 
   static List<double> brightnessAdjustMatrix({required double brightness}) {
 
-    brightness = (brightness -1) > 0 
-                      ? (brightness - 1) * 100
-                      : (brightness - 1) * 255;
+    brightness = (brightness -1) * 100;
 
     return List<double>.from(<double>[
       1, 0, 0, 0, brightness,

@@ -10,6 +10,14 @@ import '../controller/adjust_controller.dart';
 import '../controller/editor_key_controller.dart';
 import '../presentation/color_filter.dart';
 
+/* 
+  Nao adianta tentar aplicar alterações via multiplicação de matriz
+  pois ao fazer isso, todos os parametros sao alterados, o que afeta
+  a apresentacao. Neste caso a ordem importa para aplicação dos 
+  parametros. Deve-se atentar tambem ao mobx, e lembrar que ele somente
+  controla as variaveis declaradas em seu contexto
+*/
+
 class BuildImage extends StatelessWidget {
   final File image;
   final AdjustController saturationController;
@@ -43,14 +51,6 @@ class BuildImage extends StatelessWidget {
           colorFilter: ColorFilter.matrix(
               ColorFilterGenerator.brightnessAdjustMatrix(
                   brightness: brightnessController.value)),
-          /* 
-            // uma opcao é usar o codigo comentado:
-            ChangeColors(
-                    brightness: brightness,
-                    saturation: saturation,
-            // porem resolvi seguir a implementação também 
-            // encontrada no ColorOption para manter a consistencia
-            */
           child: ColorFiltered(
             colorFilter: ColorFilter.matrix(
                 ColorFilterGenerator.contrastAdjustMatrix(

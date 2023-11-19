@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:simple_image_editor/features/edit/presentation/new_edit_page.dart';
+import 'package:simple_image_editor/features/edit/presentation/edit_page.dart';
 
 class CentralButton extends StatefulWidget {
   const CentralButton({super.key});
@@ -62,7 +62,7 @@ class _CentralButtonState extends State<CentralButton> {
           context,
           MaterialPageRoute(
             // tem que implementar a nova pagina para envio do contexto
-            builder: (context) => NewEditPage(
+            builder: (context) => EditPage(
               arguments: [_image],
             ),
           ),
