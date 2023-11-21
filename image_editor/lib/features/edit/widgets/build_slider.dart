@@ -15,23 +15,25 @@ class BuildSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         SizedBox(
-          width: MediaQuery.of(context).size.width * 0.03,
-        ),
-        Column(
-          children: <Widget>[
-            Icon(
-              Icons.invert_colors_on_outlined,
-              color: Theme.of(context).colorScheme.primary,
-            ),
-            Text(
-              nameOfParameter,
-              style: TextStyle(color: Theme.of(context).colorScheme.secondary),
-            )
-          ],
+          width: MediaQuery.of(context).size.width * 0.2,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Icon(
+                selectIcons(nameOfParameter),
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              Text(
+                nameOfParameter,
+                style:
+                    TextStyle(color: Theme.of(context).colorScheme.secondary),
+              )
+            ],
+          ),
         ),
         Observer(builder: (context) {
           return SizedBox(
@@ -49,14 +51,40 @@ class BuildSlider extends StatelessWidget {
           );
         }),
         Observer(builder: (context) {
-          return Padding(
-            padding: EdgeInsets.only(
-                right: MediaQuery.of(context).size.width * 0.08),
-            child: Text(adjustControlerParameter.viewStringValue),
+          return SizedBox(
+            width: MediaQuery.of(context).size.width * 0.1,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: <Widget>[
+                Text(
+                  adjustControlerParameter.viewStringValue,
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
           );
         }),
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.04,
+        )
       ],
     );
+  }
+
+  IconData selectIcons(String nameOfParameter) {
+    if (nameOfParameter == 'Saturation' || nameOfParameter == 'Saturação') {
+      return Icons.invert_colors;
+    }
+    if (nameOfParameter == 'Contrast' || nameOfParameter == 'Contraste') {
+      return Icons.contrast_outlined;
+    }
+    if (nameOfParameter == 'Brightness' || nameOfParameter == 'Brilho') {
+      return Icons.brightness_5_rounded;
+    }
+    return Icons.brush_rounded;
   }
 }
 
