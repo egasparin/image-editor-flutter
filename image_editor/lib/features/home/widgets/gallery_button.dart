@@ -4,37 +4,37 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../edit/presentation/edit_page.dart';
 
-class CentralButton extends StatefulWidget {
-  const CentralButton({super.key});
+class GalleryButton extends StatefulWidget {
+  const GalleryButton({super.key});
 
   @override
-  State<CentralButton> createState() => _CentralButtonState();
+  State<GalleryButton> createState() => _GalleryButtonState();
 }
 
-class _CentralButtonState extends State<CentralButton> {
+class _GalleryButtonState extends State<GalleryButton> {
   File? _image;
   final picker = ImagePicker();
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      icon: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Icon(
             Icons.image_search,
-            size: 100,
+            size: 40,
             color: Colors.white,
-            weight: 100,
+            weight: 40,
           ),
           Padding(
             padding: EdgeInsets.all(10),
           ),
           Text(
             textAlign: TextAlign.center,
-            'Selecione\numa imagem',
+            'Selecione uma imagem',
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 20,
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
@@ -43,9 +43,9 @@ class _CentralButtonState extends State<CentralButton> {
       ),
       onPressed: () {
         // pega a imagem da galeria
-        // loadImage(ImageSource.gallery);
+        loadImage(ImageSource.gallery);
         // pega a imagem da camera do celular
-        loadImage(ImageSource.camera);
+        // loadImage(ImageSource.camera);
       },
     );
   }

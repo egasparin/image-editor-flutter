@@ -4,37 +4,37 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../edit/presentation/edit_page.dart';
 
-class CentralButton extends StatefulWidget {
-  const CentralButton({super.key});
+class CameraButton extends StatefulWidget {
+  const CameraButton({super.key});
 
   @override
-  State<CentralButton> createState() => _CentralButtonState();
+  State<CameraButton> createState() => _GalleryButtonState();
 }
 
-class _CentralButtonState extends State<CentralButton> {
+class _GalleryButtonState extends State<CameraButton> {
   File? _image;
   final picker = ImagePicker();
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      icon: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Icon(
-            Icons.image_search,
-            size: 100,
+            Icons.camera_alt_outlined,
+            size: 40,
             color: Colors.white,
-            weight: 100,
+            weight: 40,
           ),
           Padding(
             padding: EdgeInsets.all(10),
           ),
           Text(
             textAlign: TextAlign.center,
-            'Selecione\numa imagem',
+            'Tire uma foto',
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 20,
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
