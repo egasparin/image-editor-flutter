@@ -40,13 +40,13 @@ class _EditPageState extends State<EditPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: buildAppBar(),
       appBar: BuildAppBar(
         saturationController: saturationController,
         brightnessController: brightnessController,
         contrastController: contrastController,
         editorKeyController: editorKeyController,
-        image: image,
+        aspectRatioController: aspectRatioController,
+        image: image, 
       ),
 
       body: Column(
@@ -54,7 +54,6 @@ class _EditPageState extends State<EditPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
-              // child: buildImage(),
               child: BuildImage(
                   image: image,
                   saturationController: saturationController,

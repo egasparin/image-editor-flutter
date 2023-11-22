@@ -1,15 +1,16 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:simple_image_editor/features/edit/controller/editor_key_controller.dart';
-import 'package:simple_image_editor/features/edit/functions/edit_and_save.dart';
 
+import '../controller/aspect_ratio_controller.dart';
+import '../controller/editor_key_controller.dart';
+import '../functions/edit_and_save.dart';
 import '../controller/adjust_controller.dart';
 
 class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
   final AdjustController saturationController;
   final AdjustController brightnessController;
   final AdjustController contrastController;
+  final AspectRatioController aspectRatioController;
   final EditorKeyController editorKeyController;
   final File image;
 
@@ -18,6 +19,7 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
     required this.saturationController,
     required this.brightnessController,
     required this.contrastController,
+    required this.aspectRatioController,
     required this.editorKeyController,
     required this.image,
   });
@@ -39,6 +41,7 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
             contrastController.reset();
             brightnessController.reset();
             saturationController.reset();
+            aspectRatioController.reset();
           },
         ),
         // esse botão deve enviar para a proxima pagina, salvando as mudancas na foto

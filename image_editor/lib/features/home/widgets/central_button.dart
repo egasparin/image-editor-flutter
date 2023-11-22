@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:simple_image_editor/features/edit/presentation/edit_page.dart';
+import '../../edit/presentation/edit_page.dart';
 
 class CentralButton extends StatefulWidget {
   const CentralButton({super.key});

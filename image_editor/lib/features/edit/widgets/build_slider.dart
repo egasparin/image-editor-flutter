@@ -19,52 +19,48 @@ class BuildSlider extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         SizedBox(
-          width: MediaQuery.of(context).size.width * 0.2,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Icon(
-                selectIcons(nameOfParameter),
-                color: Theme.of(context).colorScheme.primary,
-              ),
-              Text(
-                nameOfParameter,
-                style:
-                    TextStyle(color: Theme.of(context).colorScheme.secondary),
-              )
-            ],
-          ),
-        ),
+            width: MediaQuery.of(context).size.width * 0.2,
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    selectIcons(nameOfParameter),
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  Text(
+                    nameOfParameter,
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.secondary),
+                  )
+                ])),
         Observer(builder: (context) {
           return SizedBox(
-            width: MediaQuery.of(context).size.width * 0.6,
-            child: Slider(
-              label: adjustControlerParameter.viewStringValue,
-              onChanged: (double value) {
-                adjustControlerParameter.setValue(value);
-              },
-              divisions: 50,
-              value: adjustControlerParameter.viewDoubleValue,
-              min: -1,
-              max: 1,
-            ),
-          );
+              width: MediaQuery.of(context).size.width * 0.6,
+              child: Slider(
+                label: adjustControlerParameter.viewStringValue,
+                onChanged: (double value) {
+                  adjustControlerParameter.setValue(value);
+                },
+                divisions: 50,
+                value: adjustControlerParameter.viewDoubleValue,
+                min: -1,
+                max: 1,
+              ));
         }),
         Observer(builder: (context) {
           return SizedBox(
             width: MediaQuery.of(context).size.width * 0.1,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: <Widget>[
-                Text(
-                  adjustControlerParameter.viewStringValue,
-                  style: TextStyle(
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Text(
+                    adjustControlerParameter.viewStringValue,
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.secondary,
+                        fontWeight: FontWeight.bold),
+                  )
+                ]),
           );
         }),
         SizedBox(
