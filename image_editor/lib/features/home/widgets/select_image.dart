@@ -1,47 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:simple_image_editor/features/home/widgets/build_button.dart';
-import 'gallery_button.dart';
+import 'build_button.dart';
 // import 'central_button.dart';
 
 // tem que refatorar a pagina e os botões
 // colocar todos herdando de uma classe apenas
-// usar mobx para controle do estado da imagem?
+// usar mobx para controle do estado da imagem? Não é necessário
 
 class SelectImage extends StatelessWidget {
   const SelectImage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Container(
-          height: 0.15 * MediaQuery.of(context).size.height,
-          width: 0.9 * MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(
-            color: Colors.green.withOpacity(0.4),
-            border: Border.all(
-              color: Colors.green,
-              width: 3,
-            ),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: const BuildButton(sourceImage: ImageSource.camera),
-        ),
-        Container(
-            height: 0.15 * MediaQuery.of(context).size.height,
-            width: 0.9 * MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              color: Colors.green.withOpacity(0.4),
-              border: Border.all(
-                color: Colors.green,
-                width: 3,
-              ),
-              borderRadius: BorderRadius.circular(20),
-            ),
-            // child: const CentralButton());
-            child: const GalleryButton()),
+        BuildButton(sourceImage: ImageSource.camera),
+        SizedBox(height: 10),
+        BuildButton(sourceImage: ImageSource.gallery),
       ],
     );
   }
