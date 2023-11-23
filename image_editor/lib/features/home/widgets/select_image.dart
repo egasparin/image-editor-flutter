@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:simple_image_editor/features/home/widgets/build_button.dart';
 import 'gallery_button.dart';
-import 'camera_button.dart';
 // import 'central_button.dart';
 
 // tem que refatorar a pagina e os botões
@@ -16,18 +17,18 @@ class SelectImage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-            height: 0.15 * MediaQuery.of(context).size.height,
-            width: 0.9 * MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              color: Colors.green.withOpacity(0.4),
-              border: Border.all(
-                color: Colors.green,
-                width: 3,
-              ),
-              borderRadius: BorderRadius.circular(20),
+          height: 0.15 * MediaQuery.of(context).size.height,
+          width: 0.9 * MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            color: Colors.green.withOpacity(0.4),
+            border: Border.all(
+              color: Colors.green,
+              width: 3,
             ),
-            // child: const CentralButton());
-            child: const GalleryButton()),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: const BuildButton(sourceImage: ImageSource.camera),
+        ),
         Container(
             height: 0.15 * MediaQuery.of(context).size.height,
             width: 0.9 * MediaQuery.of(context).size.width,
@@ -40,7 +41,7 @@ class SelectImage extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             // child: const CentralButton());
-            child: const CameraButton()),
+            child: const GalleryButton()),
       ],
     );
   }

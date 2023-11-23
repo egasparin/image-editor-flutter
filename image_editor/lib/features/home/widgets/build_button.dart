@@ -2,43 +2,34 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:simple_image_editor/features/home/widgets/content_button.dart';
 import '../../edit/presentation/edit_page.dart';
 
-class CameraButton extends StatefulWidget {
-  const CameraButton({super.key});
+/// tem que ver como construir e fazer  construcao do botao separado
+/// para cada funcionalidade: galeria e camara
+
+class BuildButton extends StatefulWidget {
+  final ImageSource sourceImage;
+
+  const BuildButton({
+    super.key,
+    required this.sourceImage,
+  });
 
   @override
-  State<CameraButton> createState() => _GalleryButtonState();
+  State<BuildButton> createState() => _BuildButtonState();
 }
 
-class _GalleryButtonState extends State<CameraButton> {
+class _BuildButtonState extends State<BuildButton> {
   File? _image;
   final picker = ImagePicker();
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: const Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.camera_alt_outlined,
-            size: 40,
-            color: Colors.white,
-            weight: 40,
-          ),
-          SizedBox(width: 20),
-          Text(
-            textAlign: TextAlign.center,
-            'Tire uma foto',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          )
-        ],
-      ),
+      icon: const ContentButton(
+          textOfButton: 'Tire uma foto',
+          iconOfButton: Icons.camera_alt_outlined),
       onPressed: () {
         // pega a imagem da galeria
         // loadImage(ImageSource.gallery);
