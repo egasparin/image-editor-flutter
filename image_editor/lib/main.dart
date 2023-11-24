@@ -6,6 +6,8 @@ void main() {
   runApp(const EnterApp());
 }
 
+/// Colocar todas as strings em inglês ou portugues apenas
+
 class EnterApp extends StatelessWidget {
   const EnterApp({super.key});
 
