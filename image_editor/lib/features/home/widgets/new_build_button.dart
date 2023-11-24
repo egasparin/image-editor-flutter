@@ -6,19 +6,17 @@ import 'content_button.dart';
 import '../functions/select_icon.dart';
 import '../functions/select_text.dart';
 
-class BuildButton extends StatefulWidget {
+/// Quando uso o stateless, algumas vezes ocorre
+/// uma falha no carregamento, aparecendo uma tela nao
+/// renderizada por alguns milesimos de segundo, porem
+/// perceptivel ao usuario
+/// Desta forma, não farei uso dessa.
+
+class NewBuildButton extends StatelessWidget {
   final ImageSource sourceImage;
 
-  const BuildButton({
-    super.key,
-    required this.sourceImage,
-  });
+  const NewBuildButton({super.key, required this.sourceImage});
 
-  @override
-  State<BuildButton> createState() => _BuildButtonState();
-}
-
-class _BuildButtonState extends State<BuildButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,7 +24,7 @@ class _BuildButtonState extends State<BuildButton> {
       height: 0.15 * MediaQuery.of(context).size.height,
       width: 0.9 * MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        color: Colors.green.withOpacity(0.7),
+        color: Colors.green.withOpacity(0.4),
         border: Border.all(
           color: Colors.green,
           width: 3,
@@ -36,11 +34,11 @@ class _BuildButtonState extends State<BuildButton> {
       // conteudo e ação do botão
       child: IconButton(
           icon: ContentButton(
-            textOfButton: selectText(widget.sourceImage),
-            iconOfButton: selectIcon(widget.sourceImage),
+            textOfButton: selectText(sourceImage),
+            iconOfButton: selectIcon(sourceImage),
           ),
           onPressed: () async {
-            await loadImage(selectSource(widget.sourceImage), context);
+            await loadImage(selectSource(sourceImage), context);
           }),
     );
   }

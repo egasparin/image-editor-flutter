@@ -11,10 +11,11 @@ class Background extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           colorFilter: ColorFilter.mode(
-            Colors.black.withOpacity(0.5),
+            Colors.black.withOpacity(0.1),
             BlendMode.darken,
           ),
-          image: const AssetImage('./assets/images/home-background.png'),
+          // image: const AssetImage('./assets/images/home-background.png'),
+          image: const AssetImage('./assets/images/about.png'),
           fit: BoxFit.cover,
         ),
       ),
