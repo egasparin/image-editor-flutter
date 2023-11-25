@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import '../controller/adjust_controller.dart';
+import '../functions/select_icons.dart';
 
 class BuildSlider extends StatelessWidget {
   final String nameOfParameter;
@@ -68,19 +69,6 @@ class BuildSlider extends StatelessWidget {
         )
       ],
     );
-  }
-
-  IconData selectIcons(String nameOfParameter) {
-    if (nameOfParameter == 'Saturation' || nameOfParameter == 'Saturação') {
-      return Icons.invert_colors;
-    }
-    if (nameOfParameter == 'Contrast' || nameOfParameter == 'Contraste') {
-      return Icons.contrast_outlined;
-    }
-    if (nameOfParameter == 'Brightness' || nameOfParameter == 'Brilho') {
-      return Icons.brightness_5_rounded;
-    }
-    return Icons.brush_rounded;
   }
 }
 
