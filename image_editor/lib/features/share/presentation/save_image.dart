@@ -8,29 +8,14 @@ import '../widgets/button_share.dart';
 import '../widgets/show_image.dart';
 import '../widgets/background.dart';
 
-class SaveImage extends StatefulWidget {
-  final List arguments;
-  const SaveImage({super.key, required this.arguments});
-
-  @override
-  State<SaveImage> createState() => _SaveImageState();
-}
-
-class _SaveImageState extends State<SaveImage> {
-  late File image;
-  @override
-  void initState() {
-    super.initState();
-    image = widget.arguments[0];
-  }
+class SaveImage extends StatelessWidget {
+  final File image;
+  const SaveImage({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          // para remover o botão de voltar, basta usar o 'false'
-          // automaticallyImplyLeading: false,
-
           title: const Text("Share and Save"),
           centerTitle: true,
           backgroundColor: Colors.green.shade500,

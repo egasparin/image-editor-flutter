@@ -57,7 +57,7 @@ Future<void> editAndSave(
       context,
       MaterialPageRoute(
           builder: (context) => SaveImage(
-                arguments: [image],
+                image: image,
               )),
     ),
   );
