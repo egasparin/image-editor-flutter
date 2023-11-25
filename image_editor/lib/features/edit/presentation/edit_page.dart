@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:simple_image_editor/features/edit/widgets/build_app_bar.dart';
-import 'package:simple_image_editor/features/edit/widgets/build_image.dart';
-import '../widgets/build_botton_navigation_bar.dart';
 
+import '../widgets/build_app_bar.dart';
+import '../widgets/build_image.dart';
+import '../widgets/build_botton_navigation_bar.dart';
 import '../controller/adjust_controller.dart';
 import '../controller/aspect_ratio_controller.dart';
 import '../controller/editor_key_controller.dart';

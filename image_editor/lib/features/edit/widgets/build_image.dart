@@ -7,7 +7,7 @@ import '../controller/aspect_ratio_controller.dart';
 import '../controller/page_index_controller.dart';
 import '../controller/adjust_controller.dart';
 import '../controller/editor_key_controller.dart';
-import '../presentation/color_filter.dart';
+import '../functions/color_filter.dart';
 import 'build_extend_image.dart';
 
 /* 
