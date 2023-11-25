@@ -31,8 +31,6 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       backgroundColor: Colors.green.shade500,
       actions: <Widget>[
-        // tem que ver se precisa o botão de retorno Navigator pop
-        // criar o botão que volta aos valores originais
         IconButton(
           icon: const Icon(Icons.settings_backup_restore),
           // na funcao onpressed deve-se restaurar a imagem original
