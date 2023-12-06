@@ -29,7 +29,7 @@ mixin _$PageIndexController on PageIndexControllerBase, Store {
       ActionController(name: 'PageIndexControllerBase', context: context);
 
   @override
-  dynamic setValue(dynamic newValue) {
+  dynamic setValue(int newValue) {
     final _$actionInfo = _$PageIndexControllerBaseActionController.startAction(
         name: 'PageIndexControllerBase.setValue');
     try {
@@ -40,7 +40,7 @@ mixin _$PageIndexController on PageIndexControllerBase, Store {
   }
 
   @override
-  dynamic equalTo(dynamic anyIntValue) {
+  dynamic equalTo(int anyIntValue) {
     final _$actionInfo = _$PageIndexControllerBaseActionController.startAction(
         name: 'PageIndexControllerBase.equalTo');
     try {

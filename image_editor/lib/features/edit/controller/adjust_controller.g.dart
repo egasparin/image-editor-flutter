@@ -44,7 +44,7 @@ mixin _$AdjustController on AdjustControllerBase, Store {
       ActionController(name: 'AdjustControllerBase', context: context);
 
   @override
-  dynamic setValue(dynamic newValue) {
+  dynamic setValue(double newValue) {
     final _$actionInfo = _$AdjustControllerBaseActionController.startAction(
         name: 'AdjustControllerBase.setValue');
     try {

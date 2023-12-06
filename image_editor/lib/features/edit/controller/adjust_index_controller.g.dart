@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'aspect_ratio_controller.dart';
+part of 'adjust_index_controller.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -8,45 +8,45 @@ part of 'aspect_ratio_controller.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
-mixin _$AspectRatioController on AspectRatioControllerBase, Store {
+mixin _$AdjustIndexController on AdjustIndexControllerBase, Store {
   late final _$valueAtom =
-      Atom(name: 'AspectRatioControllerBase.value', context: context);
+      Atom(name: 'AdjustIndexControllerBase.value', context: context);
 
   @override
-  double get value {
+  int get value {
     _$valueAtom.reportRead();
     return super.value;
   }
 
   @override
-  set value(double value) {
+  set value(int value) {
     _$valueAtom.reportWrite(value, super.value, () {
       super.value = value;
     });
   }
 
-  late final _$AspectRatioControllerBaseActionController =
-      ActionController(name: 'AspectRatioControllerBase', context: context);
+  late final _$AdjustIndexControllerBaseActionController =
+      ActionController(name: 'AdjustIndexControllerBase', context: context);
 
   @override
-  dynamic setValue(double newValue) {
-    final _$actionInfo = _$AspectRatioControllerBaseActionController
-        .startAction(name: 'AspectRatioControllerBase.setValue');
+  dynamic setValue(int newValue) {
+    final _$actionInfo = _$AdjustIndexControllerBaseActionController
+        .startAction(name: 'AdjustIndexControllerBase.setValue');
     try {
       return super.setValue(newValue);
     } finally {
-      _$AspectRatioControllerBaseActionController.endAction(_$actionInfo);
+      _$AdjustIndexControllerBaseActionController.endAction(_$actionInfo);
     }
   }
 
   @override
-  dynamic reset() {
-    final _$actionInfo = _$AspectRatioControllerBaseActionController
-        .startAction(name: 'AspectRatioControllerBase.reset');
+  dynamic equalTo(int anyIntValue) {
+    final _$actionInfo = _$AdjustIndexControllerBaseActionController
+        .startAction(name: 'AdjustIndexControllerBase.equalTo');
     try {
-      return super.reset();
+      return super.equalTo(anyIntValue);
     } finally {
-      _$AspectRatioControllerBaseActionController.endAction(_$actionInfo);
+      _$AdjustIndexControllerBaseActionController.endAction(_$actionInfo);
     }
   }
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'features/home/presentation/home_page.dart';
 
 void main() {
@@ -16,7 +15,7 @@ class EnterApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/home',
       routes: {
-        '/home': (context) => const HomePage(),
+        '/home': (context) => HomePage(),
         // '/edit': (context) => const EditPage(),
         // '/share': (context) => const SharePage(),
       },
