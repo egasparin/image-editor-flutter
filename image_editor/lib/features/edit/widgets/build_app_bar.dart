@@ -27,7 +27,7 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text("Edition"),
+      title: const Text("Edição"),
       centerTitle: true,
       backgroundColor: Colors.green.shade500,
       actions: <Widget>[

@@ -13,29 +13,18 @@ import '../widgets/build_page_options.dart';
 
 // TO-DO: Alterar de stateful para stateless
 
-class EditPage extends StatefulWidget {
-  final List arguments;
-  const EditPage({super.key, required this.arguments});
+class EditPage extends StatelessWidget {
+  final File image;
 
-  @override
-  State<EditPage> createState() => _EditPageState();
-}
-
-class _EditPageState extends State<EditPage> {
-  late File image;
-  @override
-  void initState() {
-    super.initState();
-    image = widget.arguments[0];
-  }
+  EditPage({super.key, required this.image});
 
   // declaração de todos os controladores utilizados
-  PageIndexController pageIndexController = PageIndexController();
-  AspectRatioController aspectRatioController = AspectRatioController();
-  EditorKeyController editorKeyController = EditorKeyController();
-  AdjustController saturationController = AdjustController();
-  AdjustController brightnessController = AdjustController();
-  AdjustController contrastController = AdjustController();
+  final PageIndexController pageIndexController = PageIndexController();
+  final AspectRatioController aspectRatioController = AspectRatioController();
+  final EditorKeyController editorKeyController = EditorKeyController();
+  final AdjustController saturationController = AdjustController();
+  final AdjustController brightnessController = AdjustController();
+  final AdjustController contrastController = AdjustController();
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +35,7 @@ class _EditPageState extends State<EditPage> {
         contrastController: contrastController,
         editorKeyController: editorKeyController,
         aspectRatioController: aspectRatioController,
-        image: image, 
+        image: image,
       ),
 
       body: Column(

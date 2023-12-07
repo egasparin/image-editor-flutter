@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import '../functions/select_text.dart';
 import '../controller/adjust_controller.dart';
 import '../functions/select_icons.dart';
 
@@ -26,12 +27,11 @@ class BuildSlider extends StatelessWidget {
                 children: <Widget>[
                   Icon(
                     selectIcons(nameOfParameter),
-                    color: Theme.of(context).colorScheme.primary,
+                    // color: Theme.of(context).colorScheme.primary,
                   ),
                   Text(
-                    nameOfParameter,
-                    style: TextStyle(
-                        color: Theme.of(context).colorScheme.secondary),
+                    selectText(nameOfParameter),
+                    // style: TextStyle(color: Theme.of(context).colorScheme.secondary),
                   )
                 ])),
         Observer(builder: (context) {
@@ -57,8 +57,8 @@ class BuildSlider extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     adjustControlerParameter.viewStringValue,
-                    style: TextStyle(
-                        color: Theme.of(context).colorScheme.secondary,
+                    style: const TextStyle(
+                        // color: Theme.of(context).colorScheme.secondary,
                         fontWeight: FontWeight.bold),
                   )
                 ]),

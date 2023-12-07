@@ -17,18 +17,47 @@ class BuildPositions extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          IconButton(
-            icon: const Icon(Icons.flip),
+          TextButton(
+            style: ButtonStyle(
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+            ),
+            child: const Column(children: [Icon(Icons.flip), Text('Espelhar')]),
             onPressed: () => editorKeyController.flip(),
           ),
-          IconButton(
-            icon: const Icon(Icons.rotate_90_degrees_ccw_outlined),
+          TextButton(
+            style: ButtonStyle(
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+            ),
+            child: const Column(children: [
+              Icon(Icons.rotate_90_degrees_ccw_outlined),
+              Text('Girar')
+            ]),
             onPressed: () => editorKeyController.rotateRight(),
           ),
-          IconButton(
-            icon: const Icon(Icons.rotate_90_degrees_cw_outlined),
+          TextButton(
+            style: ButtonStyle(
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+            ),
+            child: const Column(children: [
+              Icon(Icons.rotate_90_degrees_cw_outlined),
+              Text('Girar')
+            ]),
             onPressed: () => editorKeyController.rotateLeft(),
           ),
+
+          /// sem o texto sob o icone
+          // IconButton(
+          //   icon: const Icon(Icons.flip),
+          //   onPressed: () => editorKeyController.flip(),
+          // ),
+          // IconButton(
+          //   icon: const Icon(Icons.rotate_90_degrees_ccw_outlined),
+          //   onPressed: () => editorKeyController.rotateRight(),
+          // ),
+          // IconButton(
+          //   icon: const Icon(Icons.rotate_90_degrees_cw_outlined),
+          //   onPressed: () => editorKeyController.rotateLeft(),
+          // ),
         ],
       ),
     );

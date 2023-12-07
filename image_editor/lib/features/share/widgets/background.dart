@@ -14,7 +14,6 @@ class Background extends StatelessWidget {
             Colors.black.withOpacity(0.1),
             BlendMode.darken,
           ),
-          // image: const AssetImage('./assets/images/home-background.png'),
           image: const AssetImage('./assets/images/about.png'),
           fit: BoxFit.cover,
         ),

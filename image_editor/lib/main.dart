@@ -5,8 +5,6 @@ void main() {
   runApp(const EnterApp());
 }
 
-/// Colocar todas as strings em inglês ou portugues apenas
-
 class EnterApp extends StatelessWidget {
   const EnterApp({super.key});
 
@@ -15,9 +13,7 @@ class EnterApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/home',
       routes: {
-        '/home': (context) => HomePage(),
-        // '/edit': (context) => const EditPage(),
-        // '/share': (context) => const SharePage(),
+        '/home': (context) => const HomePage(),
       },
       debugShowCheckedModeBanner: false,
     );

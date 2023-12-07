@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+
 import '../functions/load_image.dart';
 import '../functions/select_source.dart';
 import 'content_button.dart';
@@ -24,7 +25,7 @@ class NewBuildButton extends StatelessWidget {
       height: 0.15 * MediaQuery.of(context).size.height,
       width: 0.9 * MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        color: Colors.green.withOpacity(0.4),
+        color: Colors.green.withOpacity(0.7),
         border: Border.all(
           color: Colors.green,
           width: 3,

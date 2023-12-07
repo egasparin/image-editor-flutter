@@ -16,16 +16,10 @@ class SaveImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text("Share and Save"),
-          centerTitle: true,
-          backgroundColor: Colors.green.shade500,
-          actions: <Widget>[
-            // botão que levará para a pagina de configuração
-            IconButton(
-              icon: const Icon(Icons.settings),
-              onPressed: () {},
-            ),
-          ]),
+        title: const Text("Salvar"),
+        centerTitle: true,
+        backgroundColor: Colors.green.shade500,
+      ),
       body: Stack(
         alignment: Alignment.center,
         children: <Widget>[

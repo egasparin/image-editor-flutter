@@ -25,17 +25,17 @@ class BuildBottonNavigationBar extends StatelessWidget {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.auto_fix_high_sharp),
-            label: 'Adjusts',
+            label: 'Ajustes',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.crop),
-            label: 'Crop',
+            label: 'Corte',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.screen_rotation_alt_outlined,
             ),
-            label: 'Rotate',
+            label: 'Rotação',
           ),
         ],
 

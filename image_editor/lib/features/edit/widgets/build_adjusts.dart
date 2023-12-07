@@ -22,13 +22,13 @@ class BuildAdjusts extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             BuildSlider(
-                nameOfParameter: 'Saturation',
+                nameOfParameter: 'Saturação',
                 adjustControlerParameter: saturationController),
             BuildSlider(
-                nameOfParameter: 'Brightness',
+                nameOfParameter: 'Brilho',
                 adjustControlerParameter: brightnessController),
             BuildSlider(
-                nameOfParameter: 'Contrast',
+                nameOfParameter: 'Contraste',
                 adjustControlerParameter: contrastController),
           ],
         ));

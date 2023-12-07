@@ -34,7 +34,7 @@ Future<void> editAndSave(
     ..addOption(RotateOption(action!.rotateAngle.toInt()))
     ..addOption(FlipOption(horizontal: action.flipX, vertical: action.flipY))
     ..outputFormat = const OutputFormat.jpeg(100);
-    
+
   // aplicando a edição com base nas optios e operações coletadas
   final finalImage = await ImageEditor.editImage(
     image: editedImage,

@@ -8,11 +8,6 @@ class SaveButton extends StatelessWidget {
     required this.callbackFunction,
   });
 
-  /// TO-DO: tem que criar uma funcao que permita 
-  /// criar um novo nome para a imagem antes de salvar
-  /// deve ser preenchida com o nome correspondente ao
-  /// nome-original-tempoDesde1974. O usuário pode renomear!
-
   @override
   Widget build(BuildContext context) {
     return TextButton.icon(
