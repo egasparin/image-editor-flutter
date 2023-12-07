@@ -5,7 +5,7 @@ O aplicativo possui três telas principais
 - Edição de imagem
 - Compartilhamento
 
-<img src="models-dev/imagem_app.PNG" width="700" align="CENTER">
+<img src="models-dev/imagem_app.PNG" width="1000" align="CENTER">
 
 ## Seleção de imagem
 
